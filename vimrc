@@ -1,4 +1,4 @@
-".vimrc by Thomas Huang
+"vimrc by Thomas Huang
 
 set nocompatible
 filetype plugin indent on
@@ -31,7 +31,7 @@ filetype indent on
 "syntax
 syntax on
 set background=dark
-colorscheme solarized 
+colorscheme solarized
 
 "search settings
 set ignorecase
