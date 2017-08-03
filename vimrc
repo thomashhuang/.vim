@@ -18,10 +18,9 @@ set fileencoding=utf-8
 set confirm
 
 "edit settings
-set tabstop=8
+set tabstop=4
+set softtabstop=0 noexpandtab
 set shiftwidth=4
-set softtabstop=4
-set expandtab
 set mouse=a
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "disables auto commenting on ENTER
 
