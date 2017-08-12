@@ -1,5 +1,4 @@
 "vimrc by Thomas Huang
-
 set nocompatible
 filetype plugin indent on
 
