@@ -22,6 +22,8 @@ set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "disables auto commenting on ENTER
+let mapleader="`"
+set timeout timeoutlen=1500
 
 filetype plugin on
 filetype indent on
@@ -51,3 +53,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0"
+
+"NERD commenter
+"let g:NERDCompactSexyComs=1
+"let g:NERDDefaultAlign='left'
+"let g:NERDCommentEmptyLines=1
+"let g:NERDTrimTrailingWhitespace=1
+
+
