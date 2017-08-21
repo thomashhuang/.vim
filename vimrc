@@ -1,6 +1,5 @@
-"	vimrc file by Thomas Huang
-"	newest version avaliable at https://github.com/thomashhuang/vimrc.git
-"	steal lines from this as you please
+" vimrc file by Thomas Huang
+" newest version avaliable at https://github.com/thomashhuang/vimrc.git
 
 set nocompatible            "must be first line
 
@@ -67,9 +66,9 @@ set nocompatible            "must be first line
 
 " }
 
-"   All that follows is plugin-related
+" All that follows is plugin-related
 
-"Pathogen installation
+" Pathogen installation
 execute pathogen#infect()
 
 " Syntastic {
