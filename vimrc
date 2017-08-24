@@ -72,8 +72,9 @@ set nocompatible            "must be first line
 " Pathogen installation
 execute pathogen#infect()
 
-" Syntastic {
+" Syntastic { enables syntax highlighting
 
+    "these are recommended defaults
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
@@ -85,11 +86,12 @@ execute pathogen#infect()
 " }
 
 
-" NERDcommenter {
+" NERDcommenter { improves commenting
+" comment lines with <leader>c and a movement key
 
-    let g:NERDCompactSexyComs=1
-    let g:NERDDefaultAlign='left'
-    let g:NERDCommentEmptyLines=1
-    let g:NERDTrimTrailingWhitespace=1
+    let g:NERDCompactSexyComs=1             "compact multiline comments
+    let g:NERDDefaultAlign='left'           "line comments go flush to left rather than indent
+    let g:NERDCommentEmptyLines=1           "allow commenting and inverting empty lines
+    let g:NERDTrimTrailingWhitespace=1      "enable trimming when uncommenting
 
 " }
