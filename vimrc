@@ -1,5 +1,7 @@
 " vimrc file by Thomas Huang
 " newest version avaliable at https://github.com/thomashhuang/vimrc.git
+" I would strongly recommend speeding up key repeat and delay and
+" remapping CAPS LOCK to ESC
 
 set nocompatible            "must be first line
 
@@ -30,7 +32,6 @@ set nocompatible            "must be first line
     set softtabstop=0               "backspace deletes indents
     set shiftwidth=4                "indents are 4 spaces long"
     set expandtab                   "tab inserts spaces instead
-    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "disables auto commenting on ENTER
     filetype plugin indent on       "automatically detect filetype
     set nowrap                      "do not wrap long lines 
 
