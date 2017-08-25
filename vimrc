@@ -33,7 +33,7 @@ set nocompatible            "must be first line
     set shiftwidth=4                "indents are 4 spaces long"
     set expandtab                   "tab inserts spaces instead
     filetype plugin indent on       "automatically detect filetype
-    set nowrap                      "do not wrap long lines 
+    set nowrap                      "do not wrap long lines
 
 " }
 
@@ -58,7 +58,7 @@ set nocompatible            "must be first line
 " Custom Keybinds {
 
     "remap B and E to beginning and end of line
-    nnoremap B ^ 
+    nnoremap B ^
     nnoremap E $
     "unmap $ and ^
     nnoremap $ <nop>
