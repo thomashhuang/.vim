@@ -55,7 +55,7 @@ set nocompatible            "must be first line
 " }
 
 
-" Custom Keybinds {
+" Keybinds {
 
     "remap B and E to beginning and end of line
     nnoremap B ^
@@ -64,6 +64,16 @@ set nocompatible            "must be first line
     nnoremap $ <nop>
     nnoremap ^ <nop>
     let mapleader="`"               "changes the <leader> key to tilde (`)
+
+" }
+
+
+" Macros {
+
+    "refactor between {}
+    nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>}]
+    "refactor globally
+    nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 " }
 
