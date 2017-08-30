@@ -1,7 +1,4 @@
 " vimrc file by Thomas Huang
-" newest version avaliable at https://github.com/thomashhuang/vimrc.git
-" I would strongly recommend speeding up key repeat and delay and
-" remapping CAPS LOCK to ESC
 
 set nocompatible            "must be first line
 
@@ -17,11 +14,6 @@ set nocompatible            "must be first line
     set ignorecase          "case insensitive search
     set wildmenu            "show list instead of just completing
     set noerrorbells        "disabling error bells
-    set t_vb=               "cont...
-    set tm=500              "cont...
-    if has("gui_macvim")    "disables error sounds on MacVim properly
-        autocmd GUIEnter * set vb t_vb=
-    endif
 
 " }
 
