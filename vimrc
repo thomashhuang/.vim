@@ -33,8 +33,8 @@ set nocompatible            "must be first line
 " General Settings {
 
     syntax on                       "syntax highlighting
-    set background=dark             "dark background
     colorscheme solarized           "syntax theme
+    set background=dark             "dark background
     set mouse=a                     "allows mouse use
     scriptencoding utf-8            "encoding
     set hidden                      "buffer switching without saving
