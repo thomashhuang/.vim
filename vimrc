@@ -77,13 +77,10 @@ execute pathogen#infect()
 " Syntastic { enables syntax highlighting
 
     "these are recommended defaults
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0"
+    set statusline+=%#warningmsg#                       "warning flags
+    set statusline+=%{SyntasticStatuslineFlag()}        "cont...
+    set statusline+=%*                                  "cont...
+    let g:syntastic_check_on_wq = 0                     "don't check for syntax on :wq
 
 " }
 
