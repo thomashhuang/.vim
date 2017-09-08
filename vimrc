@@ -94,3 +94,18 @@ execute pathogen#infect()
     let g:NERDTrimTrailingWhitespace=1      "enable trimming when uncommenting
 
 " }
+
+
+" Emmet { html and css shortcuts
+
+    let g:user_emmet_install_global = 0     "only use for html and css files
+
+" }
+
+
+" MatchTagAlways { highlight matching html tags
+
+    "remap `t to jump to ending tag
+    nnoremap <leader>t :MtaJumpToOtherTag<cr>
+
+ " }
