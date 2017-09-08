@@ -2,6 +2,26 @@
 
 set nocompatible            "must be first line
 
+" General Settings {
+
+    syntax on                       "syntax highlighting
+    colorscheme solarized           "syntax theme
+    set background=dark             "dark background
+    set mouse=a                     "allows mouse use
+    scriptencoding utf-8            "encoding
+    set encoding=utf-8              "cont...
+    set fileencoding=utf-8          "cont...
+    set hidden                      "buffer switching without saving
+    set showcmd                     "show commands in status line
+    set backspace=indent,eol,start  "intuitive backspace
+    set autoindent                  "automatically indent next line
+    set smartindent					"smart indent
+    set lazyredraw                  "stops redrawing when unnecessary
+    set autoread                    "reload files changed outside vim
+
+" }
+
+
 " VIM UI {
 
     set ruler               "show ruler
@@ -30,23 +50,6 @@ set nocompatible            "must be first line
 " }
 
 
-" General Settings {
-
-    syntax on                       "syntax highlighting
-    colorscheme solarized           "syntax theme
-    set background=dark             "dark background
-    set mouse=a                     "allows mouse use
-    scriptencoding utf-8            "encoding
-    set hidden                      "buffer switching without saving
-    set showcmd                     "show commands in status line
-    set backspace=indent,eol,start  "intuitive backspace
-    set autoindent                  "automatically indent next line
-    set smartindent					"smart indent
-    set lazyredraw                  "stops redrawing when unnecessary
-
-" }
-
-
 " Keybinds {
 
     "remap B and E to beginning and end of line
@@ -55,8 +58,9 @@ set nocompatible            "must be first line
     "unmap $ and ^
     nnoremap $ <nop>
     nnoremap ^ <nop>
-    let mapleader="`"               "changes the <leader> key to tilde (`)
-
+    "tilde as leader key
+    let mapleader="`"
+    
 " }
 
 
@@ -69,7 +73,6 @@ set nocompatible            "must be first line
 
 " }
 
-" All that follows is plugin-related
 
 " Pathogen installation
 execute pathogen#infect()
@@ -108,4 +111,4 @@ execute pathogen#infect()
     "remap `t to jump to ending tag
     nnoremap <leader>t :MtaJumpToOtherTag<cr>
 
- " }
+" }
