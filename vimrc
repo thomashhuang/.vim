@@ -50,21 +50,21 @@ set nocompatible            "must be first line
 " }
 
 
-" Keybinds {
+" Keybinds and macros {
+
+    "tilde as leader key
+    let mapleader="`"
 
     "remap B and E to beginning and end of line
     nnoremap B ^
     nnoremap E $
+    
     "unmap $ and ^
     nnoremap $ <nop>
     nnoremap ^ <nop>
-    "tilde as leader key
-    let mapleader="`"
-    
-" }
 
-
-" Macros {
+    "auto indent blocks with {<ENTER>
+    inoremap {<CR> {<CR>}<left><CR><esc>ki<tab>
 
     "refactor between {}
     nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>}]
@@ -83,7 +83,7 @@ execute pathogen#infect()
     set statusline+=%#warningmsg#                       "warning flags
     set statusline+=%{SyntasticStatuslineFlag()}        "cont...
     set statusline+=%*                                  "cont...
-    let g:syntastic_check_on_wq = 0                     "don't check for syntax on :wq
+    let g:syntastic_check_on_wq=0                     "don't check for syntax on :wq
 
 " }
 
@@ -102,6 +102,7 @@ execute pathogen#infect()
 " Emmet { html and css shortcuts
 
     let g:user_emmet_install_global = 0     "only use for html and css files
+    autocmd Filetype html,css EmmetInstall
 
 " }
 
@@ -110,5 +111,13 @@ execute pathogen#infect()
 
     "remap `t to jump to ending tag
     nnoremap <leader>t :MtaJumpToOtherTag<cr>
+
+" }
+
+
+" delimitMate {
+
+    "proper expansion of <CR> after a {
+    let delimitMate_expand_cr=1
 
 " }
