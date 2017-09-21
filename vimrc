@@ -64,7 +64,7 @@ set nocompatible            "must be first line
     nnoremap ^ <nop>
 
     "auto indent blocks with {<ENTER>
-    inoremap {<CR> {<CR>}<left><CR><esc>ki<tab>
+    inoremap {<CR> {<CR>}<left><CR><esc>kA<tab>
 
     "refactor between {}
     nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>}]
