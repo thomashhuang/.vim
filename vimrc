@@ -5,8 +5,8 @@ set nocompatible            "must be first line
 " General Settings {
 
     syntax on                       "syntax highlighting
-    colorscheme solarized           "syntax theme
     set background=dark             "dark background
+    colorscheme neodark             "syntax theme
     set mouse=a                     "allows mouse use
     scriptencoding utf-8            "encoding
     set encoding=utf-8              "cont...
