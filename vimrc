@@ -42,10 +42,10 @@ set nocompatible            "must be first line
 
     set tabstop=4                   "indents every four columns
     set softtabstop=0               "backspace deletes indents
-    set shiftwidth=4                "indents are 4 spaces long"
+    set shiftwidth=4                "indents are 4 spaces long
     set expandtab                   "tab inserts spaces instead
     filetype plugin indent on       "automatically detect filetype
-    set nowrap                      "do not wrap long lines
+    "set nowrap                      "do not wrap long lines
 
 " }
 
