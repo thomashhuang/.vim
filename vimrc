@@ -52,8 +52,8 @@ set nocompatible            "must be first line
 
 " Keybinds and macros {
 
-    "tilde as leader key
-    let mapleader="`"
+    "space as leader key
+    let mapleader=" "
 
     "remap B and E to beginning and end of line
     nnoremap B ^
@@ -79,11 +79,10 @@ execute pathogen#infect()
 
 " Syntastic { enables syntax highlighting
 
-    "these are recommended defaults
     set statusline+=%#warningmsg#                       "warning flags
     set statusline+=%{SyntasticStatuslineFlag()}        "cont...
     set statusline+=%*                                  "cont...
-    let g:syntastic_check_on_wq=0                     "don't check for syntax on :wq
+    let g:syntastic_check_on_wq=0                       "don't check for syntax on :wq
 
 " }
 
@@ -102,6 +101,7 @@ execute pathogen#infect()
 " Emmet { html and css shortcuts
 
     let g:user_emmet_install_global = 0     "only use for html and css files
+    let g:user_emmet_leader_key=','         "double tap comma to trigger emmet
     autocmd Filetype html,css EmmetInstall
 
 " }
