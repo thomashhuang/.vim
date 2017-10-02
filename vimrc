@@ -1,4 +1,5 @@
 " vimrc file by Thomas Huang
+" Using iTerm2 with background color 0x303030
 
 set nocompatible            "must be first line
 
@@ -16,9 +17,9 @@ set nocompatible            "must be first line
     set backspace=indent,eol,start  "intuitive backspace
     set autoindent                  "automatically indent next line
     set smartindent					"smart indent
-    set lazyredraw                  "stops redrawing when unnecessary
+    set lazyredraw                  "stop redrawing when unnecessary
     set autoread                    "reload files changed outside vim
-
+    
 " }
 
 
@@ -70,6 +71,13 @@ set nocompatible            "must be first line
     nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>}]
     "refactor globally
     nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
+    "when opening a file, jump to line where cursor was last time 
+    if has("autocmd")
+        au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+            \| exe "normal! g'\"" | endif
+    endif
+
 
 " }
 
