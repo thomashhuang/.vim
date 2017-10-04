@@ -35,6 +35,7 @@ set nocompatible            "must be first line
     set ignorecase          "case insensitive search
     set wildmenu            "show list instead of just completing
     set noerrorbells        "disabling error bells
+    set nowrap              "do not wrap long lines
 
 " }
 
@@ -46,7 +47,6 @@ set nocompatible            "must be first line
     set shiftwidth=4                "indents are 4 spaces long
     set expandtab                   "tab inserts spaces instead
     filetype plugin indent on       "automatically detect filetype
-    "set nowrap                      "do not wrap long lines
 
 " }
 
@@ -78,6 +78,14 @@ set nocompatible            "must be first line
             \| exe "normal! g'\"" | endif
     endif
 
+    "Ctrl+hl to move between tabs
+    map <C-h> :tabp<CR>
+    map <C-l> :tabn<CR>
+
+    "Ctrl+jk to move between buffers
+    map <C-k> :bprev<CR>
+    map <C-j> :bnext<CR>
+
 
 " }
 
@@ -108,9 +116,8 @@ execute pathogen#infect()
 
 " Emmet { html and css shortcuts
 
-    let g:user_emmet_install_global = 0     "only use for html and css files
+    let g:user_emmet_install_global = 0     "don't install automatically
     let g:user_emmet_leader_key=','         "double tap comma to trigger emmet
-    autocmd Filetype html,css EmmetInstall
 
 " }
 
@@ -127,5 +134,14 @@ execute pathogen#infect()
 
     "proper expansion of <CR> after a {
     let delimitMate_expand_cr=1
+
+" }
+
+
+" NERDTree {
+   
+    nnoremap <C-t> :NERDTreeToggle<CR>
+    "close vim if only open window is NERDTree
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " }
