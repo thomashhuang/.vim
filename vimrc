@@ -86,6 +86,8 @@ set nocompatible            "must be first line
     map <C-k> :bprev<CR>
     map <C-j> :bnext<CR>
 
+    "Ctrl+b to show buffers
+    map <C-b> :buffers<CR>
 
 " }
 
