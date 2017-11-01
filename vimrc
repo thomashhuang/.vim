@@ -67,7 +67,7 @@ set nocompatible            "must be first line
     "auto indent blocks with {<ENTER>
     inoremap {<CR> {<CR>}<left><CR><esc>kA<tab>
 
-    "refactor between {}
+    "refactor between {
     nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>}]
     "refactor globally
     nnoremap gR gD:%s/<C-R>///gc<left><left><left>
@@ -88,6 +88,13 @@ set nocompatible            "must be first line
 
     "Ctrl+b to show buffers
     map <C-b> :buffers<CR>
+
+    "<leader><number> to switch to window <number>
+    let i = 1
+    while i <= 9
+        execute 'nnoremap <Leader>' . i . ' :' . i . 'wincmd w<CR>'
+        let i = i + 1
+    endwhile
 
 " }
 
@@ -145,5 +152,12 @@ execute pathogen#infect()
     nnoremap <C-t> :NERDTreeToggle<CR>
     "close vim if only open window is NERDTree
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" }
+
+
+" Indent Guides {
+
+    let g:indent_guides_guide_size=1   "smaller indent guides
 
 " }
