@@ -35,7 +35,7 @@ set nocompatible            "must be first line
     set ignorecase          "case insensitive search
     set wildmenu            "show list instead of just completing
     set noerrorbells        "disabling error bells
-    set nowrap              "do not wrap long lines
+    "set nowrap              "do not wrap long lines
 
 " }
 
@@ -79,12 +79,12 @@ set nocompatible            "must be first line
     endif
 
     "Ctrl+hl to move between tabs
-    map <C-h> :tabp<CR>
-    map <C-l> :tabn<CR>
+    noremap <C-h> :tabp<CR>
+    noremap <C-l> :tabn<CR>
 
     "Ctrl+jk to move between buffers
-    map <C-k> :bprev<CR>
-    map <C-j> :bnext<CR>
+    noremap <C-k> :bprev<CR>
+    noremap <C-j> :bnext<CR>
 
     "Ctrl+b to show buffers
     map <C-b> :buffers<CR>
