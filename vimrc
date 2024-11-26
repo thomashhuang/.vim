@@ -143,6 +143,10 @@ execute pathogen#infect()
 
     "proper expansion of <CR> after a {
     let delimitMate_expand_cr=1
+    "turn off matching of <:> by default
+    let b:delimitMate_matchpairs = "(:),[:],{:}"
+    "turn on matching of all types in html and xml files
+    au FileType html,xml let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
 
 " }
 
