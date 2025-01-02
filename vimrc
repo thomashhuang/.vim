@@ -2,9 +2,6 @@
 " Using iTerm2 with background color 0x303030
 
 set nocompatible            "must be first line
-filetype off                "required for vundle
-
-
 
 " Pathogen installation
 execute pathogen#infect()
@@ -17,7 +14,6 @@ execute pathogen#infect()
 
 " }
 
-
 " NERDcommenter { improves commenting
 " comment lines with <leader>c and a movement key
 
@@ -28,13 +24,11 @@ execute pathogen#infect()
 
 " }
 
-
 " airline-themes {
 
     let g:airline_theme='deus'
 
 " }
-
 
 " indentLine {
 
@@ -44,13 +38,11 @@ execute pathogen#infect()
 
 " }
 
-
 " numbers {
     
     let g:numbers_exclude = ['nerdtree']   "don't show line numbers on tree
 
 " }
-
 
 " syntastic {
 
@@ -64,6 +56,7 @@ execute pathogen#infect()
     let g:syntastic_check_on_wq = 0
 
 " }
+
 
 " General Settings {
 
@@ -84,7 +77,6 @@ execute pathogen#infect()
     
 " }
 
-
 " VIM UI {
 
     set ruler               "show ruler
@@ -101,16 +93,15 @@ execute pathogen#infect()
 
 " }
 
-
 " Formatting {
 
     set tabstop=4                   "indents every four columns
     set softtabstop=0               "backspace deletes indents
     set shiftwidth=4                "indents are 4 spaces long
     set expandtab                   "tab inserts spaces instead
+    filetype plugin indent on       "enable file-specific config
 
 " }
-
 
 " Keybinds and macros {
 
