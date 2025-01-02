@@ -2,6 +2,68 @@
 " Using iTerm2 with background color 0x303030
 
 set nocompatible            "must be first line
+filetype off                "required for vundle
+
+
+
+" Pathogen installation
+execute pathogen#infect()
+
+" NERDTree {
+   
+    nnoremap <C-t> :NERDTreeToggle<CR>
+    "close vim if only open window is NERDTree
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" }
+
+
+" NERDcommenter { improves commenting
+" comment lines with <leader>c and a movement key
+
+    let g:NERDCompactSexyComs=1             "compact multiline comments
+    let g:NERDDefaultAlign='left'           "line comments go flush to left rather than indent
+    let g:NERDCommentEmptyLines=1           "allow commenting and inverting empty lines
+    let g:NERDTrimTrailingWhitespace=1      "enable trimming when uncommenting
+
+" }
+
+
+" airline-themes {
+
+    let g:airline_theme='deus'
+
+" }
+
+
+" indentLine {
+
+    let g:indentLine_char = '┆'
+    let g:vim_json_conceal=0
+    let g:markdown_syntax_conceal=0
+
+" }
+
+
+" numbers {
+    
+    let g:numbers_exclude = ['nerdtree']   "don't show line numbers on tree
+
+" }
+
+
+" syntastic {
+
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+    
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
+" }
 
 " General Settings {
 
@@ -46,7 +108,6 @@ set nocompatible            "must be first line
     set softtabstop=0               "backspace deletes indents
     set shiftwidth=4                "indents are 4 spaces long
     set expandtab                   "tab inserts spaces instead
-    filetype plugin indent on       "automatically detect filetype
 
 " }
 
@@ -78,6 +139,11 @@ set nocompatible            "must be first line
             \| exe "normal! g'\"" | endif
     endif
 
+    "disable automatically commenting next line
+    inoremap <expr> <enter> getline('.') =~ '^\s*//' ? '<enter><esc>S' : '<enter>'
+    nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : 'O'
+    nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : 'o'
+
     "Ctrl+hl to move between tabs
     noremap <C-h> :tabp<CR>
     noremap <C-l> :tabn<CR>
@@ -95,73 +161,5 @@ set nocompatible            "must be first line
         execute 'nnoremap <Leader>' . i . ' :' . i . 'wincmd w<CR>'
         let i = i + 1
     endwhile
-
-" }
-
-
-" Pathogen installation
-execute pathogen#infect()
-
-" Syntastic { enables syntax highlighting
-
-    set statusline+=%#warningmsg#                       "warning flags
-    set statusline+=%{SyntasticStatuslineFlag()}        "cont...
-    set statusline+=%*                                  "cont...
-    let g:syntastic_check_on_wq=0                       "don't check for syntax on :wq
-
-" }
-
-
-" NERDcommenter { improves commenting
-" comment lines with <leader>c and a movement key
-
-    let g:NERDCompactSexyComs=1             "compact multiline comments
-    let g:NERDDefaultAlign='left'           "line comments go flush to left rather than indent
-    let g:NERDCommentEmptyLines=1           "allow commenting and inverting empty lines
-    let g:NERDTrimTrailingWhitespace=1      "enable trimming when uncommenting
-
-" }
-
-
-" Emmet { html and css shortcuts
-
-    let g:user_emmet_install_global = 0     "don't install automatically
-    let g:user_emmet_leader_key=','         "double tap comma to trigger emmet
-
-" }
-
-
-" MatchTagAlways { highlight matching html tags
-
-    "remap `t to jump to ending tag
-    nnoremap <leader>t :MtaJumpToOtherTag<cr>
-
-" }
-
-
-" delimitMate {
-
-    "proper expansion of <CR> after a {
-    let delimitMate_expand_cr=1
-    "turn off matching of <:> by default
-    let b:delimitMate_matchpairs = "(:),[:],{:}"
-    "turn on matching of all types in html and xml files
-    au FileType html,xml let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
-
-" }
-
-
-" NERDTree {
-   
-    nnoremap <C-t> :NERDTreeToggle<CR>
-    "close vim if only open window is NERDTree
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" }
-
-
-" Indent Guides {
-
-    let g:indent_guides_guide_size=1   "smaller indent guides
 
 " }

@@ -1,21 +1,9 @@
 [submodule "MatchTagAlways"]
 	path = bundle/MatchTagAlways
 	url = https://github.com/valloric/MatchTagAlways.git
-[submodule "browserlink.vim"]
-	path = bundle/browserlink.vim
-	url = https://github.com/jaxbot/browserlink.vim.git
-[submodule "delimitMate"]
-	path = bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
-[submodule "emmet-vim"]
-	path = bundle/emmet-vim
-    url = https://github.com/mattn/emmet-vim.git
 [submodule "indentLine"]
 	path = bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule "neodark.vim"]
-	path = bundle/neodark.vim
-	url = https://github.com/KeitaNakamura/neodark.vim.git
 [submodule "nerdcommenter"]
     path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -25,12 +13,6 @@
 [submodule "numbers"]
 	path = bundle/numbers
 	url = https://github.com/myusuf3/numbers.vim.git
-[submodule "onedark.vim"]
-    path = bundle/onedark.vim
-	url = https://github.com/joshdick/onedark.vim.git
-[submodule "supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
@@ -40,28 +22,15 @@
 [submodule "vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-css-color"]
-    path = bundle/vim-css-color
-	url = https://github.com/skammer/vim-css-color.git
 [submodule "vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim-g"]
-	path = bundle/vim-g
-	url = https://github.com/szw/vim-g.git
-[submodule "vim-indent-guides"]
-	path = bundle/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "vim-minimap"]
-	path = bundle/vim-minimap
-	url = https://github.com/severin-lemaignan/vim-minimap.git
 [submodule "vim-startify"]
 	path = bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
 [submodule "vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
